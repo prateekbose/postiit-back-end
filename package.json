@@ -1,0 +1,12 @@
+{
+  "name": "postit-back-end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Prateek Bose",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "jimp": "^0.16.1"
+  }
+}
