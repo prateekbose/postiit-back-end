@@ -7,7 +7,6 @@ const fs = require('fs')
 // const theFontMgr = FontManager.instance()
 const app = express()
 
-app.use(express.json())
 app.use(express.static(path.join(__dirname, '/')))
 
 var PORT = process.env.PORT || 3000
