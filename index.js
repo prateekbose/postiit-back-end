@@ -10,8 +10,10 @@ const app = express()
 app.use(express.json())
 app.use(express.static(path.join(__dirname, '/')))
 
-var PORT = process.env.PORT || 3001
-app.listen(PORT)
+var PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`)
+})
 console.log("Server Running\n" + path.join(__dirname, '/'))
 
 app.get("/:index", (req, res) => {
