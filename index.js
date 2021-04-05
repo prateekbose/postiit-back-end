@@ -7,6 +7,7 @@ const fs = require('fs')
 // const theFontMgr = FontManager.instance()
 const app = express()
 
+app.use(express.json())
 app.use(express.static(path.join(__dirname, '/')))
 
 var PORT = process.env.PORT || 3000
@@ -20,7 +21,7 @@ app.get("/:index", (req, res) => {
     var index = parseInt(req.params.index)
     console.log(text)
 
-    jimp.read("./images/thumb.jpg")
+    jimp.read(`./images/${index}.jpg`)
         .then(loadedImage => {
             jimp.loadFont(jimp.FONT_SANS_128_WHITE)
                 .then(font => {
